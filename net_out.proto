@@ -1,9 +1,7 @@
-// Whitelist network traffic.
+// Whitelist outbound network traffic.
 //
 // If the configuration directive `deny_networks` is not used,
 // all networks are already whitelisted and this command is effectively a no-op.
-//
-// > **TODO** Link to page explaining how networking works.
 //
 // ### Request
 //

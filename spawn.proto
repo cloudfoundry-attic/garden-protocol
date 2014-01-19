@@ -10,6 +10,7 @@
 // * `script`: Script to execute.
 // * `privileged`: Whether to run the script as root or not.
 // * `rlimits`: Resource limits (see `ResourceLimits`).
+// * `discard_output`: Do not collect stdout/stderr in memory.
 //
 // ### Response
 //

@@ -1,8 +1,23 @@
 // Run a job inside a container.
 //
-// This request is equivalent to spawning a job and immediately linking to it.
+// This request is equivalent to atomically spawning a job and immediately
+// linking to it.
 //
-// See `Spawn` and `Link` for a description of the request and response.
+// ### Request
+//
+// The specified script is interpreted by `/bin/bash` inside the container.
+//
+// * `handle`: Container handle.
+// * `script`: Script to execute.
+// * `privileged`: Whether to run the script as root or not.
+// * `rlimits`: Resource limits (see `ResourceLimits`).
+// * `discard_output`: Do not collect stdout/stderr in memory.
+//
+// ### Response
+//
+// * `exit_status`: Exit status of the job.
+// * `stdout`: Standard out produced by the job.
+// * `stderr`: Standard error produced by the job.
 //
 // ### Errors
 //
