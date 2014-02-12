@@ -11,7 +11,7 @@
 // * `host_ip`: IP address of the host side of the container's virtual ethernet pair.
 // * `container_ip`: IP address of the container side of the container's virtual ethernet pair.
 // * `container_path`: Path to the directory holding the container's files (both its control scripts and filesystem).
-// * `job_ids`: List of running jobs.
+// * `process_ids`: List of running process.
 //
 // > **TODO** Describe different types of stats.
 //
@@ -91,5 +91,5 @@ message InfoResponse {
   optional DiskStat disk_stat           = 42;
   optional BandwidthStat bandwidth_stat = 43;
 
-  repeated uint64 job_ids = 44;
+  repeated uint64 process_ids = 44;
 }
