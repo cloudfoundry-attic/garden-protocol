@@ -44,9 +44,15 @@ message CreateRequest {
       RW = 1;
     }
 
+    enum Origin {
+      Host = 0;
+      Container = 1;
+    }
+
     required string src_path = 1;
     required string dst_path = 2;
     required Mode mode = 3;
+    optional Origin origin = 4;
   }
 
   repeated BindMount bind_mounts = 1;
