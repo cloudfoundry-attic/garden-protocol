@@ -18,6 +18,10 @@
 // container in future requests. If it is not specified,
 // warden uses its internal container ID as the container handle.
 //
+// * `properties`: A sequence of string key/value pairs providing arbitrary
+// data about the container. The keys are assumed to be unique but this is not
+// enforced via the protocol.
+//
 // > **TODO**: `network` and `rootfs`
 //
 // ### Response
@@ -36,6 +40,8 @@
 //
 
 package warden;
+
+import "property.proto";
 
 message CreateRequest {
   message BindMount {
@@ -64,6 +70,8 @@ message CreateRequest {
   optional string network = 4;
 
   optional string rootfs = 5;
+
+  repeated Property properties = 6;
 }
 
 message CreateResponse {

@@ -2,7 +2,7 @@
 //
 // ### Request
 //
-// Empty.
+// * `properties`: List of properties to filter by. Multiple properties are ANDed together.
 //
 // ### Response
 //
@@ -17,7 +17,10 @@
 
 package warden;
 
+import "property.proto";
+
 message ListRequest {
+  repeated Property properties = 1;
 }
 
 message ListResponse {
