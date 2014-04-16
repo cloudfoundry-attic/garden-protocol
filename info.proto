@@ -12,6 +12,7 @@
 // * `container_ip`: IP address of the container side of the container's virtual ethernet pair.
 // * `container_path`: Path to the directory holding the container's files (both its control scripts and filesystem).
 // * `process_ids`: List of running process.
+// * `properties`: List of properties defined for the container.
 //
 // > **TODO** Describe different types of stats.
 //
@@ -23,6 +24,8 @@
 //
 
 package warden;
+
+import "property.proto";
 
 message InfoRequest {
   required string handle = 1;
@@ -92,4 +95,6 @@ message InfoResponse {
   optional BandwidthStat bandwidth_stat = 43;
 
   repeated uint64 process_ids = 44;
+
+  repeated Property properties = 45;
 }
