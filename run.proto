@@ -11,6 +11,7 @@
 // * `script`: Script to execute.
 // * `privileged`: Whether to run the script as root or not.
 // * `rlimits`: Resource limits (see `ResourceLimits`).
+// * `env`: Environment Variables (see `EnvironmentVariable`).
 //
 // ### Response
 //
@@ -26,6 +27,7 @@
 package warden;
 
 import "resource_limits.proto";
+import "environment_variable.proto";
 
 message RunRequest {
   required string handle = 1;
@@ -33,4 +35,5 @@ message RunRequest {
   required string script = 2;
   optional bool privileged = 3 [default = false];
   optional ResourceLimits rlimits = 4;
+  repeated EnvironmentVariable env = 5;
 }
