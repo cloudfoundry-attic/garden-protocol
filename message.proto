@@ -29,6 +29,7 @@ message Message {
     Ping = 91;
     List = 92;
     Echo = 93;
+    Capacity = 94;
   }
 
   required Type type = 1;
