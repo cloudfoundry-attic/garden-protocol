@@ -14,9 +14,6 @@ message Message {
     NetIn  = 31;
     NetOut = 32;
 
-    CopyIn  = 41;
-    CopyOut = 42;
-
     LimitMemory    = 51;
     LimitDisk      = 52;
     LimitBandwidth = 53;
