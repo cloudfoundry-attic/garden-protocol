@@ -81,6 +81,11 @@ message InfoResponse {
     optional uint64 out_burst = 4;
   }
 
+  message PortMapping {
+    required uint32 host_port = 1;
+    required uint32 container_port = 2;
+  }
+
   optional string state = 10;
 
   repeated string events = 20;
@@ -97,4 +102,6 @@ message InfoResponse {
   repeated uint64 process_ids = 44;
 
   repeated Property properties = 45;
+
+  repeated PortMapping mapped_ports = 46;
 }
