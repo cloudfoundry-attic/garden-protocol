@@ -25,12 +25,10 @@ message Message {
 
     Ping = 91;
     List = 92;
-    Echo = 93;
     Capacity = 94;
 
     StreamIn  = 95;
     StreamOut = 96;
-    StreamChunk = 97;
   }
 
   required Type type = 1;
