@@ -13,7 +13,6 @@
 // killing them ungracefully.
 //
 // * `handle`: Container handle.
-// * `background`: Return a response immediately instead of waiting for the container to be stopped.
 // * `kill`: Send SIGKILL instead of SIGTERM.
 //
 // ### Response
@@ -32,7 +31,6 @@ package warden;
 message StopRequest {
   required string handle = 1;
 
-  optional bool background = 10 [default = false];
   optional bool kill       = 20 [default = false];
 }
 
