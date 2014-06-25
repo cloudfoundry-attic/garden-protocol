@@ -8,7 +8,8 @@
 // The specified script is interpreted by `/bin/bash` inside the container.
 //
 // * `handle`: Container handle.
-// * `script`: Script to execute.
+// * `path`: Path to command to execute.
+// * `args`: Arguments to pass to command.
 // * `privileged`: Whether to run the script as root or not.
 // * `rlimits`: Resource limits (see `ResourceLimits`).
 // * `env`: Environment Variables (see `EnvironmentVariable`).
@@ -32,8 +33,9 @@ import "environment_variable.proto";
 message RunRequest {
   required string handle = 1;
 
-  required string script = 2;
+  required string path = 2;
   optional bool privileged = 3 [default = false];
   optional ResourceLimits rlimits = 4;
   repeated EnvironmentVariable env = 5;
+  repeated string args = 6;
 }
