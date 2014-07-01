@@ -13,6 +13,7 @@
 // * `privileged`: Whether to run the script as root or not.
 // * `rlimits`: Resource limits (see `ResourceLimits`).
 // * `env`: Environment Variables (see `EnvironmentVariable`).
+// * `dir`: Working directory (default: home directory).
 //
 // ### Response
 //
@@ -38,4 +39,5 @@ message RunRequest {
   optional ResourceLimits rlimits = 4;
   repeated EnvironmentVariable env = 5;
   repeated string args = 6;
+  optional string dir = 7;
 }
