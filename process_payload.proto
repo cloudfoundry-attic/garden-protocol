@@ -21,4 +21,5 @@ message ProcessPayload {
   optional Source source = 2;
   optional string data = 3;
   optional uint32 exit_status = 4;
+  optional string error = 5;
 }
