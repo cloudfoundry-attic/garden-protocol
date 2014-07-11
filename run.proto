@@ -14,6 +14,7 @@
 // * `rlimits`: Resource limits (see `ResourceLimits`).
 // * `env`: Environment Variables (see `EnvironmentVariable`).
 // * `dir`: Working directory (default: home directory).
+// * `tty`: Execute with a TTY for stdio.
 //
 // ### Response
 //
@@ -40,4 +41,5 @@ message RunRequest {
   repeated EnvironmentVariable env = 5;
   repeated string args = 6;
   optional string dir = 7;
+  optional bool tty = 8 [default = false];
 }
