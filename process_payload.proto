@@ -17,9 +17,15 @@ message ProcessPayload {
     stderr = 2;
   }
 
+  message WindowSize {
+    required uint32 columns = 1;
+    required uint32 rows = 2;
+  }
+
   required uint32 process_id = 1;
   optional Source source = 2;
   optional string data = 3;
   optional uint32 exit_status = 4;
   optional string error = 5;
+  optional WindowSize window_size = 6;
 }
