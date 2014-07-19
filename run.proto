@@ -31,6 +31,7 @@ package warden;
 
 import "resource_limits.proto";
 import "environment_variable.proto";
+import "tty.proto";
 
 message RunRequest {
   required string handle = 1;
@@ -41,5 +42,5 @@ message RunRequest {
   repeated EnvironmentVariable env = 5;
   repeated string args = 6;
   optional string dir = 7;
-  optional bool tty = 8 [default = false];
+  optional TTY tty = 8;
 }
