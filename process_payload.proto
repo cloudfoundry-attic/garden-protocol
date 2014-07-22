@@ -10,6 +10,8 @@
 
 package warden;
 
+import "tty.proto";
+
 message ProcessPayload {
   enum Source {
     stdin = 0;
@@ -22,4 +24,5 @@ message ProcessPayload {
   optional string data = 3;
   optional uint32 exit_status = 4;
   optional string error = 5;
+  optional TTY tty = 6;
 }
