@@ -72,6 +72,9 @@ message CreateRequest {
   optional string rootfs = 5;
 
   repeated Property properties = 6;
+
+  repeated  string env_variables = 7;
+  
 }
 
 message CreateResponse {
