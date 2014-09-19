@@ -21,7 +21,7 @@
 // ### Definition
 //
 
-package warden;
+package garden;
 
 message LimitMemoryRequest {
   required string handle = 1;

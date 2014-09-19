@@ -29,7 +29,7 @@
 // ### Definition
 //
 
-package warden;
+package garden;
 
 message NetInRequest {
   required string handle = 1;

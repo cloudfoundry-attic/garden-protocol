@@ -1,6 +1,6 @@
 // nodoc
 
-package warden;
+package garden;
 
 message Message {
   enum Type {

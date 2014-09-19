@@ -8,7 +8,7 @@
 // * `exit_status`: Exit status of the process -- only present if the process has exited
 //
 
-package warden;
+package garden;
 
 import "tty.proto";
 

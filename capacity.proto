@@ -16,7 +16,7 @@
 // ### Definition
 //
 
-package warden;
+package garden;
 
 message CapacityRequest {
 }

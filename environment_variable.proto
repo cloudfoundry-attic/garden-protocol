@@ -5,7 +5,7 @@
 // ### Definition
 //
 
-package warden;
+package garden;
 
 message EnvironmentVariable {
   required string Key = 1;

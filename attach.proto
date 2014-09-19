@@ -18,7 +18,7 @@
 // ### Definition
 //
 
-package warden;
+package garden;
 
 import "info.proto";
 

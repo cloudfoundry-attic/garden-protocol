@@ -23,7 +23,7 @@
 // ### Definition
 //
 
-package warden;
+package garden;
 
 import "property.proto";
 

@@ -1,7 +1,7 @@
 // Configuration for a container's attached tty.
 //
 
-package warden;
+package garden;
 
 message TTY {
   message WindowSize {

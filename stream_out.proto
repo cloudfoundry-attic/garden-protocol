@@ -20,7 +20,7 @@
 // ### Definition
 //
 
-package warden;
+package garden;
 
 message StreamOutRequest {
   required string handle = 1;

@@ -17,7 +17,7 @@
 // ### Definition
 //
 
-package warden;
+package garden;
 
 message StreamInRequest {
   required string handle = 1;

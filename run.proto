@@ -27,7 +27,7 @@
 // ### Definition
 //
 
-package warden;
+package garden;
 
 import "resource_limits.proto";
 import "environment_variable.proto";

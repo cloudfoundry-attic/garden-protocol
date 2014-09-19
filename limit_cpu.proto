@@ -19,7 +19,7 @@
 // ### Definition
 //
 
-package warden;
+package garden;
 
 message LimitCpuRequest {
   required string handle = 1;
