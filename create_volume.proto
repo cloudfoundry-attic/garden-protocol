@@ -1,0 +1,38 @@
+// Creates a new volume.
+//
+// ### Request
+//
+// All parameters are optional.
+//
+// * `handle`: If specified, its value must be used to refer to the
+// container in future requests. If it is not specified,
+// garden uses its internal container ID as the container handle.
+//
+// * `host_path`: Can be used to have a volume represent an existing path on
+// the host. If not specified, the volume is independently managed. If specified,
+// and the directory does not exist on the host, it will be created automatically.
+//
+// ### Response
+//
+// The `handle` field contains the handle that must be used to refer to the
+// volume in future requests. It is the same as the `handle` field in the
+// request, if it was passed.
+//
+// ### Errors
+//
+// * When the `handle`, if specified, is already taken.
+//
+// ### Definition
+//
+
+package garden;
+
+message CreateVolumeRequest {
+  optional string handle = 1;
+  optional string host_path = 2;
+
+}
+
+message CreateVolumeResponse {
+  required string handle = 1;
+}

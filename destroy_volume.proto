@@ -1,0 +1,28 @@
+// Destroys a volume.
+//
+// When a volume is destroyed, its data is also destroyed, *unless* it is
+// backed by a directory on the host.
+//
+// ### Request
+//
+// * `handle`: Container handle.
+//
+// ### Response
+//
+// Empty.
+//
+// ### Errors
+//
+// * When `handle` does not refer to a volume.
+//
+// ### Definition
+//
+
+package garden;
+
+message DestroyVolumeRequest {
+  required string handle = 1;
+}
+
+message DestroyVolumeResponse {
+}

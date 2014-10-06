@@ -20,8 +20,6 @@
 
 package garden;
 
-import "info.proto";
-
 message AttachRequest {
   required string handle = 1;
   required uint32 process_id = 2;

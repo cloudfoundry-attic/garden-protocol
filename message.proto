@@ -29,6 +29,11 @@ message Message {
 
     StreamIn  = 95;
     StreamOut = 96;
+
+    CreateVolume = 101;
+    DestroyVolume = 102;
+    BindVolume = 103;
+    UnbindVolume = 104;
   }
 
   required Type type = 1;

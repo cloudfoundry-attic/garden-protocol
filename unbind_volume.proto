@@ -1,0 +1,29 @@
+// Unbinds a volume to a container.
+//
+// ### Request
+//
+// * `container_handle`: The container to bind the volume to.
+//
+// * `volume_handle`: The volume to bind to the container.
+//
+// ### Response
+//
+// Empty.
+//
+// ### Errors
+//
+// * When the `container_handle` does not refer to an existing container.
+// * When the `volume_handle` does not refer to an existing volume.
+//
+// ### Definition
+//
+
+package garden;
+
+message UnbindVolumeRequest {
+  required string container_handle = 1;
+  required string volume_handle = 2;
+}
+
+message UnbindVolumeResponse {
+}

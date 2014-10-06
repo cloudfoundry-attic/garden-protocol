@@ -1,0 +1,26 @@
+// Given a volume handle, returns the same handle if the volume exists.
+//
+// ### Request
+//
+// * `handle`: Volume handle.
+//
+// ### Response
+//
+// * `handle`: Volume handle.
+//
+// ### Errors
+//
+// * When `handle` does not refer to a volume.
+//
+// ### Definition
+//
+
+package garden;
+
+message LookupVolumeRequest {
+  required string handle = 1;
+}
+
+message LookupVolumeResponse {
+  required string handle = 1;
+}
