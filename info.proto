@@ -93,6 +93,7 @@ message InfoResponse {
   optional string host_ip        = 30;
   optional string container_ip   = 31;
   optional string container_path = 32;
+  optional string external_ip    = 33;
 
   optional MemoryStat memory_stat       = 40;
   optional CpuStat cpu_stat             = 41;
