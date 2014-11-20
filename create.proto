@@ -21,6 +21,10 @@
 // * `properties`: A sequence of string key/value pairs providing arbitrary
 // data about the container. The keys are assumed to be unique but this is not
 // enforced via the protocol.
+// 
+// * 'privileged': If specified and true the root user in the container will be
+// mapped to the root user in the host. Otherwise, the root user in the container
+// is mapped to a non-root user in the host.
 //
 // > **TODO**: `network` and `rootfs`
 //
@@ -76,6 +80,7 @@ message CreateRequest {
 
   repeated EnvironmentVariable env = 7;
 
+  optional bool privileged = 8;
 }
 
 message CreateResponse {

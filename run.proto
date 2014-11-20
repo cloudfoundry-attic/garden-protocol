@@ -5,7 +5,10 @@
 //
 // ### Request
 //
-// The specified script is interpreted by `/bin/bash` inside the container.
+// The specified script is interpreted by `/bin/bash` inside the container. 
+// The 'privileged' flag remains for backwards compatibility, but the 'user' flag is preferred.
+//
+// The root user will be mapped to a non-root UID in the host unless the container (not this process) was created with 'privileged' true.
 //
 // * `handle`: Container handle.
 // * `path`: Path to command to execute.
