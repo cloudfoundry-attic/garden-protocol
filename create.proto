@@ -26,7 +26,7 @@
 // mapped to the root user in the host. Otherwise, the root user in the container
 // is mapped to a non-root user in the host.
 //
-// > **TODO**: `network` and `rootfs`
+// > **TODO**: `network` (defined in https://github.com/cloudfoundry-incubator/garden/blob/master/doc/garden-api.md) and `rootfs`
 //
 // ### Response
 //
