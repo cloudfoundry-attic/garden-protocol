@@ -23,10 +23,17 @@
 package garden;
 
 message NetOutRequest {
+  enum Protocol {
+    TCP = 0;
+    ALL = 1;
+  }
+
   required string handle = 1;
 
   optional string network = 2;
   optional uint32 port    = 3;
+
+  optional Protocol protocol = 5;
 }
 
 message NetOutResponse {
