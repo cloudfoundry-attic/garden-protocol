@@ -8,6 +8,7 @@
 // * `handle`: Container handle.
 // * `network`: Network to whitelist (in the form `1.2.3.4/8`).
 // * `port`: Port to whitelist.
+// * `port_range`: Colon separated port range (in the form `8080:9080`).
 //
 // ### Response
 //
@@ -23,10 +24,17 @@
 package garden;
 
 message NetOutRequest {
+  enum Protocol {
+    TCP = 0;
+    ALL = 1;
+  }
+
   required string handle = 1;
 
   optional string network = 2;
   optional uint32 port    = 3;
+  optional string port_range = 4;
+  optional Protocol protocol = 5;
 }
 
 message NetOutResponse {
