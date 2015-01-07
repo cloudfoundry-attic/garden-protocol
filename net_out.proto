@@ -27,6 +27,7 @@ message NetOutRequest {
   enum Protocol {
     TCP = 0;
     ALL = 1;
+    ICMP = 2;
   }
 
   required string handle = 1;
