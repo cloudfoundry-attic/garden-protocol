@@ -19,10 +19,16 @@ message ProcessPayload {
     stderr = 2;
   }
 
+  enum Signal {
+    terminate = 0;
+    kill = 1;
+  }
+
   required uint32 process_id = 1;
   optional Source source = 2;
   optional string data = 3;
   optional uint32 exit_status = 4;
   optional string error = 5;
   optional TTY tty = 6;
+  optional Signal signal = 7;
 }
