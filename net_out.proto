@@ -28,6 +28,7 @@ message NetOutRequest {
     TCP = 0;
     ALL = 1;
     ICMP = 2;
+    UDP = 3;
   }
 
   required string handle = 1;
