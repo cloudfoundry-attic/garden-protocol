@@ -1,32 +1,11 @@
-// Whitelist outbound network traffic.
-//
-// If the configuration directive `deny_networks` is not used,
-// all networks are already whitelisted and this command is effectively a no-op.
-//
-// ### Request
-//
-// * `handle`: Container handle.
-// * `network`: Network to whitelist (in the form `1.2.3.4/8`).
-// * `port`: Port to whitelist.
-// * `port_range`: Colon separated port range (in the form `8080:9080`).
-//
-// ### Response
-//
-// Empty.
-//
-// ### Errors
-//
-// * When `handle` does not refer to a container.
-//
-// ### Definition
-//
-
 package garden;
 
 message NetOutRequest {
   enum Protocol {
     TCP = 0;
     ALL = 1;
+    ICMP = 2;
+    UDP = 3;
   }
 
   required string handle = 1;
@@ -35,6 +14,8 @@ message NetOutRequest {
   optional uint32 port    = 3;
   optional string port_range = 4;
   optional Protocol protocol = 5;
+  optional int32 icmp_type   = 6 [default=-1];
+  optional int32 icmp_code   = 7 [default=-1];
 }
 
 message NetOutResponse {
