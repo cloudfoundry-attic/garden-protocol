@@ -8,16 +8,29 @@ message NetOutRequest {
     UDP = 3;
   }
 
+  message NetworkInterval {
+    required string start = 1;
+    required string end = 2;
+  }
+
+  message PortInterval {
+    required uint32 start = 1;
+    required uint32 end = 2;
+  }
+
+  message ICMPControl {
+    required uint32 type = 1;
+    optional uint32 code = 2;
+  }
+
+
   required string handle = 1;
 
-  optional string network = 2;
-  optional uint32 port    = 3;
-  optional string port_range = 4;
-  optional Protocol protocol = 5;
-  optional int32 icmp_type   = 6 [default=-1];
-  optional int32 icmp_code   = 7 [default=-1];
-
-  optional bool log = 8;
+  required Protocol protocol = 2;
+  optional NetworkInterval network = 3;
+  optional PortInterval ports = 4;
+  optional ICMPControl icmps = 5;
+  optional bool log = 6;
 }
 
 message NetOutResponse {
