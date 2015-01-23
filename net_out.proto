@@ -1,36 +1,36 @@
 package garden;
 
 message NetOutRequest {
+
   enum Protocol {
     TCP = 0;
-    ALL = 1;
+    UDP = 1;
     ICMP = 2;
-    UDP = 3;
+    ALL = 3;
   }
 
-  message NetworkInterval {
+  message IPRange {
     required string start = 1;
     required string end = 2;
   }
 
-  message PortInterval {
+  message PortRange {
     required uint32 start = 1;
     required uint32 end = 2;
   }
 
   message ICMPControl {
     required uint32 type = 1;
-    optional uint32 code = 2;
+    optional int32 code = 2 [default=-1];
   }
-
 
   required string handle = 1;
 
   required Protocol protocol = 2;
-  optional NetworkInterval network = 3;
-  optional PortInterval ports = 4;
+  optional IPRange network = 3;
+  optional PortRange ports = 4;
   optional ICMPControl icmps = 5;
-  optional bool log = 6;
+  required bool log = 6;
 }
 
 message NetOutResponse {
